@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroBg from "../assets/hero-bg.jpg";
-import logoAsset from "../assets/emet-fav.png";
+import logoAsset from "/emet.png";
 import { SERVICES, CORE_VALUES } from "../lib/services-data";
 
 const homeJsonLd = {

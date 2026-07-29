@@ -1,9 +1,9 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import logoAsset from "../assets/emet-logo.png.asset.json";
-import { SERVICES } from "../lib/services-data";
+import { SERVICES, type ServiceCategory } from "../lib/services-data";
 
 export const Route = createFileRoute("/services/$slug")({
-  loader: ({ params }) => {
+  loader: ({ params }): { service: ServiceCategory } => {
     const service = SERVICES.find((s) => s.slug === params.slug);
     if (!service) throw notFound();
     return { service };

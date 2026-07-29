@@ -55,7 +55,7 @@ export const Route = createFileRoute("/services/$slug")({
 });
 
 function ServiceDetail() {
-  const { service: s } = Route.useLoaderData();
+  const { service: s } = Route.useLoaderData() as { service: ServiceCategory };
   const others = SERVICES.filter((x) => x.slug !== s.slug);
 
   return (

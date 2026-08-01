@@ -230,7 +230,7 @@ function Footer() {
       </div>
       <div className="border-t border-border/40">
         <div className="container-emet flex flex-col sm:flex-row gap-3 justify-between py-6 text-xs text-muted-foreground">
-          <span>{new Date().getFullYear()} EMET</span>
+          <span>© {new Date().getFullYear()} EMET</span>
           <span className="tracking-[0.2em] uppercase">Truth Technology Transformation</span>
         </div>
       </div>

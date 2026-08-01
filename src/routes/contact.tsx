@@ -24,18 +24,18 @@ const contactJsonLd = {
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact EMET — Perth Digital Studio | hello@emet.com.au" },
+      { title: "Contact EMET · Digital Solutions | hello@emet.com.au" },
       {
         name: "description",
         content:
-          "Get in touch with EMET. Based in Perth, Western Australia, we work with clients across Australia and internationally. Email hello@emet.com.au or call +61 497 461 907.",
+          "Get in touch with EMET. Email hello@emet.com.au or call +61 497 461 907.",
       },
-      { property: "og:title", content: "Contact EMET" },
-      { property: "og:description", content: "Start a project with Perth's truth-first digital studio." },
+      { property: "og:title", content: "Contact EMET · Digital Solutions" },
+      { property: "og:description", content: "Start a project with EMET." },
       { property: "og:url", content: "/contact" },
       { property: "og:image", content: logoAsset.url },
       { name: "twitter:title", content: "Contact EMET" },
-      { name: "twitter:description", content: "Start a project with EMET, Perth." },
+      { name: "twitter:description", content: "Start a project with EMET." },
       { name: "twitter:image", content: logoAsset.url },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
@@ -67,9 +67,7 @@ function Contact() {
           Tell us about your <span className="italic text-gold">project.</span>
         </h1>
         <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          Whether you're launching a business in Perth or scaling a brand
-          across borders, we'd love to hear what you're building. We reply to
-          every enquiry within one business day.
+          Tell us what you're building. We reply to every enquiry within one business day.
         </p>
       </section>
 

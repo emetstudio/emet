@@ -18,12 +18,12 @@ export const SERVICES: ServiceCategory[] = [
   {
     slug: "software-technology",
     name: "Software & Technology",
-    eyebrow: "01 — Build",
+    eyebrow: "01 · Build",
     tagline: "Custom software engineered on truth.",
     description:
       "Custom software, web applications, mobile apps, AI and automation, and API integrations engineered for reliability, scale and long-term value.",
     intro:
-      "We architect software the way trusted infrastructure is built — with clarity of purpose, disciplined engineering and honest reporting. From internal tools that erase manual work to customer-facing platforms that carry your brand, we build systems your team can rely on.",
+      "We architect software the way trusted infrastructure is built, with clarity of purpose, disciplined engineering and honest reporting. From internal tools that erase manual work to customer-facing platforms that carry your brand, we build systems your team can rely on.",
     items: [
       { name: "Custom Software Development", description: "Bespoke platforms designed around your operations, not a template." },
       { name: "Web Application Development", description: "Fast, secure, SEO-ready web apps built on modern frameworks." },
@@ -40,12 +40,12 @@ export const SERVICES: ServiceCategory[] = [
   {
     slug: "web",
     name: "Web",
-    eyebrow: "02 — Web",
+    eyebrow: "02 · Web",
     tagline: "Websites that earn trust in seconds.",
     description:
-      "Business websites, e-commerce, ongoing maintenance and performance optimisation — engineered for search, speed and conversion.",
+      "Business websites, e-commerce, ongoing maintenance and performance optimisation, engineered for search, speed and conversion.",
     intro:
-      "Your website is often the first honest signal a customer receives about your business. We craft sites that load instantly, rank strongly on Google, and speak clearly to the people you serve — in Australia and around the world.",
+      "Your website is often the first honest signal a customer receives about your business. We craft sites that load instantly, rank strongly on Google, and speak clearly to the people you serve.",
     items: [
       { name: "Business Websites", description: "Beautifully designed marketing sites that convert visitors into customers." },
       { name: "E-commerce Websites", description: "Fast, secure online stores with clean checkout and inventory workflows." },
@@ -61,12 +61,12 @@ export const SERVICES: ServiceCategory[] = [
   {
     slug: "creative",
     name: "Creative",
-    eyebrow: "03 — Creative",
+    eyebrow: "03 · Creative",
     tagline: "Identity systems that mean something.",
     description:
       "Branding, logo design, UI/UX and graphic design that translate your values into a visual language customers remember.",
     intro:
-      "Great brands are not decoration — they are the visible edge of a company's values. We design identity systems, product interfaces and marketing collateral that stay honest to who you are while inviting the audience you deserve.",
+      "Great brands are not decoration. They are the visible edge of a company's values. We design identity systems, product interfaces and marketing collateral that stay honest to who you are.",
     items: [
       { name: "Branding & Identity Design", description: "Complete visual identity systems: strategy, palette, typography, guidelines." },
       { name: "Logo Design", description: "Distinctive marks that work at every scale, in colour, black and white." },
@@ -82,12 +82,12 @@ export const SERVICES: ServiceCategory[] = [
   {
     slug: "media",
     name: "Media",
-    eyebrow: "04 — Media",
+    eyebrow: "04 · Media",
     tagline: "Photography and video that tell the truth beautifully.",
     description:
       "Photography, videography, commercial content and social-first storytelling that make your business visible and credible.",
     intro:
-      "Every business has a real story worth showing. We produce photography and video that captures the honest character of your team, your product and your customers — cinematic in quality, authentic in feel.",
+      "Every business has a real story worth showing. We produce photography and video that captures the honest character of your team, your product and your customers.",
     items: [
       { name: "Photography", description: "Portrait, product, event and lifestyle photography with editorial polish." },
       { name: "Videography", description: "Brand films, testimonials and event coverage shot to broadcast standard." },
@@ -103,17 +103,17 @@ export const SERVICES: ServiceCategory[] = [
   {
     slug: "marketing",
     name: "Marketing",
-    eyebrow: "05 — Grow",
+    eyebrow: "05 · Grow",
     tagline: "Growth built on measurable truth.",
     description:
-      "Digital strategy, social media management, SEO and Google Business Profile setup grounded in analytics — not guesswork.",
+      "Digital strategy, social media management, SEO and Google Business Profile setup grounded in analytics, not guesswork.",
     intro:
-      "Marketing without honesty is noise. We build strategies where every dollar and every hour is measured, reported and defended — so growth is a decision, not a hope.",
+      "Marketing without honesty is noise. We build strategies where every dollar and every hour is measured, reported and defended. Growth is a decision, not a hope.",
     items: [
       { name: "Digital Strategy", description: "Roadmaps that align brand, product, content and paid channels." },
       { name: "Social Media Management", description: "Planning, publishing, community and reporting across platforms." },
       { name: "Search Engine Optimisation (SEO)", description: "Technical, on-page and content SEO tuned for Australian and global search." },
-      { name: "Google Business Profile Setup", description: "Local SEO foundation that puts you on the map — literally." },
+      { name: "Google Business Profile Setup", description: "Local SEO foundation that puts you on the map." },
     ],
     outcomes: [
       "Attract qualified traffic from Google, not vanity clicks",

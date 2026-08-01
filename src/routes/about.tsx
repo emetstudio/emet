@@ -5,18 +5,18 @@ import { CORE_VALUES } from "../lib/services-data";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About EMET — Perth's Truth-First Digital Studio" },
+      { title: "About EMET · Digital Solutions" },
       {
         name: "description",
         content:
-          "EMET is a Perth-based digital studio founded on truth, excellence and impact. Learn our story, mission and vision for Australian and international businesses.",
+          "EMET is a digital solutions company founded on truth, excellence and impact. Learn our story, mission and vision.",
       },
-      { property: "og:title", content: "About EMET — Truth-first digital studio, Perth" },
+      { property: "og:title", content: "About EMET · Digital Solutions" },
       { property: "og:description", content: "Our story, mission and the five values that shape every project we ship." },
       { property: "og:url", content: "/about" },
       { property: "og:image", content: logoAsset.url },
       { name: "twitter:title", content: "About EMET" },
-      { name: "twitter:description", content: "Truth-first digital studio in Perth, Australia." },
+      { name: "twitter:description", content: "Digital studio built on truth." },
       { name: "twitter:image", content: logoAsset.url },
     ],
     links: [{ rel: "canonical", href: "/about" }],
@@ -30,12 +30,12 @@ function About() {
       <section className="container-emet py-24 md:py-32">
         <p className="eyebrow"><span className="hairline mr-4" />About EMET</p>
         <h1 className="mt-6 text-5xl md:text-6xl max-w-3xl leading-tight">
-          Technology should solve real problems — <span className="italic text-gold">truthfully.</span>
+          Technology should solve real problems <span className="italic text-gold">truthfully.</span>
         </h1>
         <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          EMET (אֱמֶת) is the Hebrew word for truth. In the Bible it represents
-          faithfulness, reliability and integrity. Those values define how we
-          approach every client, every project and every product we ship.
+          EMET (אֱמֶת) is Hebrew for truth. Faithfulness, reliability and
+          integrity. The values that define how we approach every client
+          and every project.
         </p>
       </section>
 
@@ -46,17 +46,9 @@ function About() {
             <h2 className="mt-4 text-3xl md:text-4xl">Built on a simple belief.</h2>
             <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                EMET was founded on the belief that technology should solve
-                real problems with honesty and excellence. In a world full of
-                shortcuts and empty promises, we exist to build digital
-                solutions people can trust.
-              </p>
-              <p>
-                We combine creativity, technology and innovation to help
-                businesses grow, tell their stories and operate more
-                efficiently. Our goal is not just to build websites or
-                software — it is to become a trusted technology partner that
-                empowers businesses through meaningful digital experiences.
+                Technology should solve real problems with honesty and
+                excellence. We exist to build digital solutions people
+                can trust.
               </p>
               <p>
                 Every line of code, every design and every strategy is built
@@ -68,16 +60,15 @@ function About() {
             <div className="border border-gold/30 bg-[oklch(0.22_0.04_245)] p-8">
               <p className="eyebrow">Mission</p>
               <p className="mt-4 text-xl text-foreground leading-relaxed">
-                To empower businesses through innovative, reliable and
-                impactful digital solutions built with integrity.
+                To empower businesses through honest, reliable and
+                impactful digital solutions.
               </p>
             </div>
             <div className="border border-emerald/40 bg-[oklch(0.22_0.04_245)] p-8">
               <p className="eyebrow" style={{ color: "var(--emerald)" }}>Vision</p>
               <p className="mt-4 text-xl text-foreground leading-relaxed">
-                To become one of Australia's leading technology and digital
-                innovation companies — recognised globally for creating
-                solutions that inspire trust and drive growth.
+                To be recognised as a technology partner that inspires
+                trust and drives growth.
               </p>
             </div>
           </div>
@@ -103,7 +94,7 @@ function About() {
       <section className="border-t border-border/60 bg-[oklch(0.17_0.035_245)]">
         <div className="container-emet py-20 text-center">
           <h2 className="text-3xl md:text-4xl max-w-2xl mx-auto">
-            Ready to work with a studio built on truth?
+            Ready to work with us?
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link to="/contact" className="btn-gold">Start a project</Link>

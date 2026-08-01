@@ -39,17 +39,17 @@ const GALLERY = Array.from({ length: 9 }, (_, i) => {
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
-      { title: "Our Work — Clients & Portfolio | EMET Perth" },
+      { title: "Our Work · Clients & Portfolio | EMET" },
       {
         name: "description",
         content:
-          "A selection of the businesses we've partnered with across Australia and internationally — plus a scrapbook of recent design, development and media work by EMET.",
+          "A selection of the businesses we've partnered with and recent design, development and media work by EMET.",
       },
-      { property: "og:title", content: "Our Work — EMET" },
-      { property: "og:description", content: "Clients and a scrapbook of recent work from Perth-based studio EMET." },
+      { property: "og:title", content: "Our Work · EMET" },
+      { property: "og:description", content: "Clients and recent work from EMET." },
       { property: "og:url", content: "/work" },
       { property: "og:image", content: logoAsset.url },
-      { name: "twitter:title", content: "EMET — Our Work" },
+      { name: "twitter:title", content: "EMET · Our Work" },
       { name: "twitter:description", content: "Clients and recent work from EMET." },
       { name: "twitter:image", content: logoAsset.url },
     ],
@@ -67,9 +67,8 @@ function Work() {
           Clients and craft, <span className="italic text-gold">unfiltered.</span>
         </h1>
         <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          A living record of the businesses we've partnered with and the work
-          we've shipped — websites, brands, films and software from our studio
-          in Perth to clients across Australia and beyond.
+          The businesses we've partnered with and the work we've shipped.
+          Websites, brands, films and software.
         </p>
       </section>
 
@@ -90,7 +89,7 @@ function Work() {
             ))}
           </div>
           <p className="mt-6 text-xs text-muted-foreground italic">
-            Placeholder client marks — real logos land here as partnerships are announced.
+            Placeholder client marks. Real logos land here as partnerships are announced.
           </p>
         </div>
       </section>
@@ -103,7 +102,7 @@ function Work() {
             <h2 className="mt-4 text-4xl md:text-5xl">Recent frames.</h2>
           </div>
           <p className="max-w-md text-sm text-muted-foreground">
-            Snapshots pulled from ongoing projects — websites, brand systems,
+            Snapshots pulled from ongoing projects: websites, brand systems,
             photography, video and UI in the wild.
           </p>
         </div>
@@ -129,7 +128,7 @@ function Work() {
           ))}
         </div>
         <p className="mt-6 text-xs text-muted-foreground italic">
-          Placeholder imagery — replaced as project galleries are approved for publication.
+          Placeholder imagery. Replaced as project galleries are approved for publication.
         </p>
       </section>
 

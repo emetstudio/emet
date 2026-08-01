@@ -22,14 +22,14 @@ const servicesJsonLd = {
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Software, Web, Creative, Media & Marketing | EMET" },
+      { title: "Services · Software, Web, Creative, Media & Marketing | EMET" },
       {
         name: "description",
         content:
-          "EMET services: custom software, web development, branding, photography, videography and digital marketing for Australian and international businesses.",
+          "EMET services: custom software, web development, branding, photography, videography and digital marketing. Built on truth.",
       },
-      { property: "og:title", content: "EMET Services — Software, Web, Creative, Media, Marketing" },
-      { property: "og:description", content: "Five disciplines, one standard of craft. Built on truth in Perth, Australia." },
+      { property: "og:title", content: "EMET Services · Software, Web, Creative, Media, Marketing" },
+      { property: "og:description", content: "Five disciplines, one standard of craft. Built on truth." },
       { property: "og:url", content: "/services" },
       { property: "og:image", content: logoAsset.url },
       { name: "twitter:title", content: "EMET Services" },
@@ -51,9 +51,8 @@ function Services() {
           Five disciplines. One standard of <span className="italic text-gold">craft.</span>
         </h1>
         <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          Everything a modern business needs to launch, grow and operate
-          online — delivered under one roof, with transparent quotes and
-          honest reporting.
+          Everything a modern business needs under one roof. Transparent
+          quotes and honest reporting.
         </p>
       </section>
 

@@ -10,10 +10,10 @@ export const Route = createFileRoute("/services/$slug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Service not found — EMET" }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "Service not found · EMET" }, { name: "robots", content: "noindex" }] };
     }
     const s = loaderData.service;
-    const title = `${s.name} — EMET Perth, Australia`;
+    const title = `${s.name} · EMET Digital Studio`;
     return {
       meta: [
         { title },

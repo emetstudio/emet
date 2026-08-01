@@ -108,14 +108,14 @@ const SOCIAL_PACKS = [
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing — Websites, Branding, Media & Software | EMET" },
+      { title: "Pricing · Websites, Branding, Media & Software | EMET" },
       {
         name: "description",
         content:
-          "Transparent AUD pricing for websites, branding, photography, videography, social media and custom software from EMET, Perth. Fixed packages and monthly retainers.",
+          "Transparent AUD pricing for websites, branding, photography, videography, social media and custom software. Fixed packages and monthly retainers.",
       },
-      { property: "og:title", content: "EMET Pricing — Websites, Branding, Media, Software" },
-      { property: "og:description", content: "Transparent AUD pricing for Australian and international clients." },
+      { property: "og:title", content: "EMET Pricing · Websites, Branding, Media, Software" },
+      { property: "og:description", content: "Transparent AUD pricing. No hidden costs." },
       { property: "og:url", content: "/pricing" },
       { property: "og:image", content: logoAsset.url },
       { name: "twitter:title", content: "EMET Pricing" },
@@ -152,10 +152,8 @@ function Pricing() {
           Honest pricing. <span className="italic text-gold">No hidden costs.</span>
         </h1>
         <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-          Below is a guide to our standard packages and rates in Australian
-          dollars. Custom software is quoted based on scope once we fully
-          understand your project. Every quote we send is final — never a
-          starting point.
+          A guide to our standard packages and rates in AUD. Custom software
+          is quoted based on scope. Every quote is final.
         </p>
       </section>
 
@@ -165,7 +163,7 @@ function Pricing() {
           <p className="eyebrow">Launch packages</p>
           <h2 className="mt-4 text-3xl md:text-4xl">Everything you need to go live.</h2>
           <p className="mt-4 max-w-xl text-sm text-muted-foreground">
-            Introductory pricing for new businesses launching in Australia. First 10 clients receive one free bonus — see below.
+            Introductory pricing for new businesses. First 10 clients receive one free bonus. See below.
           </p>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {LAUNCH_PACKS.map((p) => (

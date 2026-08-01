@@ -1,13 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroBg from "../assets/hero-bg.jpg";
-import logoAsset from "/emet.png";
+import emetLogo from "../assets/emet-logo.png";
 import { SERVICES, CORE_VALUES } from "../lib/services-data";
 
 const homeJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "EMET",
-  image: logoAsset.url,
+  image: emetLogo,
   url: "https://www.emet.com.au",
   telephone: "+61497461907",
   email: "hello@emet.com.au",
@@ -38,20 +38,20 @@ const homeJsonLd = {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "EMET — Truth. Technology. Transformation. | Digital Studio Perth, Australia" },
+      { title: "EMET · Truth. Technology. Transformation. | Digital Solutions" },
       {
         name: "description",
         content:
-          "EMET is a Perth-based digital studio building software, websites, branding, media and marketing for Australian and international businesses that value truth, excellence and impact.",
+          "EMET builds software, websites, branding, media and marketing for businesses that value truth, excellence and impact.",
       },
-      { name: "keywords", content: "web design Perth, software development Australia, digital agency Perth, branding, SEO Australia, mobile app development, EMET" },
-      { property: "og:title", content: "EMET — Truth. Technology. Transformation." },
-      { property: "og:description", content: "Australian digital studio building trusted software, websites and brands. Perth, Australia — serving clients worldwide." },
+      { name: "keywords", content: "web design, software development, digital agency, branding, SEO, mobile app development, EMET" },
+      { property: "og:title", content: "EMET · Truth. Technology. Transformation." },
+      { property: "og:description", content: "Digital solutions company building trusted software, websites and brands." },
       { property: "og:url", content: "/" },
-      { property: "og:image", content: logoAsset.url },
-      { name: "twitter:title", content: "EMET — Truth. Technology. Transformation." },
-      { name: "twitter:description", content: "Australian digital studio building trusted software, websites and brands." },
-      { name: "twitter:image", content: logoAsset.url },
+      { property: "og:image", content: emetLogo },
+      { name: "twitter:title", content: "EMET · Truth. Technology. Transformation." },
+      { name: "twitter:description", content: "Digital studio building trusted software, websites and brands." },
+      { name: "twitter:image", content: emetLogo },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [{ type: "application/ld+json", children: JSON.stringify(homeJsonLd) }],
@@ -77,7 +77,7 @@ function Home() {
           <div className="max-w-3xl">
             <p className="eyebrow">
               <span className="hairline mr-4" />
-              Australian Digital Studio · Est. Perth
+              Digital Solutions
             </p>
             <h1 className="mt-6 text-5xl md:text-7xl leading-[1.05] text-foreground">
               Truth. Technology.
@@ -85,9 +85,8 @@ function Home() {
               <span className="text-gold italic">Transformation.</span>
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              EMET builds digital experiences people can trust. Software,
-              websites, branding, media and marketing — engineered with
-              integrity for Australian and international businesses.
+              EMET builds software, websites, branding and media.
+              Engineered with integrity.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link to="/contact" className="btn-gold">Start a project</Link>
@@ -101,10 +100,10 @@ function Home() {
       <section className="border-y border-border/60 bg-[oklch(0.17_0.035_245)]">
         <div className="container-emet grid grid-cols-2 md:grid-cols-4 gap-8 py-10">
           {[
-            ["Perth · Australia", "Local roots"],
-            ["Global delivery", "Worldwide clients"],
+            ["Perth, Western Australia", "Based"],
+            ["Global delivery", "Worldwide"],
             ["Fixed & retainer pricing", "No hidden costs"],
-            ["Truth-first reporting", "Honest metrics"],
+            ["Honest reporting", "Real metrics"],
           ].map(([a, b]) => (
             <div key={a}>
               <div className="text-sm font-semibold text-foreground">{a}</div>
@@ -163,9 +162,9 @@ function Home() {
               Built on <span className="italic text-gold">truth.</span>
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              EMET (אֱמֶת) is the Hebrew word for truth. It stands for
-              faithfulness, reliability and integrity — and it is the standard
-              we hold ourselves to on every project, quote and line of code.
+              EMET (אֱמֶת) is Hebrew for truth. Faithfulness, reliability
+              and integrity. The standard we hold ourselves to on every
+              project, quote and line of code.
             </p>
           </div>
           <ul className="grid gap-8 sm:grid-cols-2">
@@ -188,8 +187,7 @@ function Home() {
             Let's build something you can be proud of.
           </h2>
           <p className="mt-6 max-w-xl mx-auto text-muted-foreground">
-            Tell us about your business. We'll respond within one business day
-            with honest next steps — no pitch decks, no pressure.
+            Tell us about your project. We'll respond within one business day.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link to="/contact" className="btn-gold">Start a project</Link>

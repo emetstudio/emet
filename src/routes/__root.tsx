@@ -11,7 +11,7 @@ import { useEffect, useState, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import logoAsset from "../assets/emet-logo.png.asset.json";
+import emetLogo from "../assets/emet-logo.png";
 
 function NotFoundComponent() {
   return (
@@ -20,7 +20,7 @@ function NotFoundComponent() {
         <p className="eyebrow">404</p>
         <h1 className="mt-4 text-5xl text-foreground">Page not found</h1>
         <p className="mt-4 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+          The page you are looking for does not exist or has been moved.
         </p>
         <div className="mt-8">
           <Link to="/" className="btn-gold">Return home</Link>
@@ -64,9 +64,9 @@ const orgJsonLd = {
   name: "EMET",
   legalName: "EMET",
   url: "https://www.emet.com.au",
-  logo: logoAsset.url,
+  logo: emetLogo,
   description:
-    "EMET is an Australian technology and digital innovation studio building software, websites, branding, media and marketing for businesses that value truth, excellence and integrity.",
+    "EMET is a digital studio building software, websites, branding and media for businesses that value truth, excellence and impact.",
   slogan: "Truth. Technology. Transformation.",
   email: "hello@emet.com.au",
   telephone: "+61497461907",
@@ -146,12 +146,8 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-[oklch(0.19_0.04_245_/_0.85)] backdrop-blur-md">
       <div className="container-emet flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logoAsset.url} alt="EMET" width={40} height={40} className="h-10 w-10 object-contain" />
-          <span className="hidden sm:flex flex-col leading-none">
-            <span className="text-lg font-semibold tracking-[0.4em] text-foreground">EMET</span>
-            <span className="text-[0.55rem] tracking-[0.28em] text-gold mt-1">TRUTH · TECHNOLOGY</span>
-          </span>
+        <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <img src={emetLogo} alt="EMET" width={120} height={40} className="h-10 w-auto object-contain" />
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {NAV.map((n) => (
@@ -204,17 +200,9 @@ function Footer() {
     <footer className="border-t border-border/60 bg-[oklch(0.16_0.035_245)] mt-24">
       <div className="container-emet py-16 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="EMET" width={44} height={44} className="h-11 w-11 object-contain" />
-            <div>
-              <div className="text-lg font-semibold tracking-[0.4em]">EMET</div>
-              <div className="text-[0.6rem] tracking-[0.28em] text-gold mt-1">TRUTH · TECHNOLOGY · TRANSFORMATION</div>
-            </div>
-          </div>
+          <img src={emetLogo} alt="EMET" width={140} height={44} className="h-11 w-auto object-contain" />
           <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
-            An Australian technology and digital innovation studio building
-            software, websites, branding and media for businesses that value
-            truth, excellence and impact.
+            A digital studio building software, websites, branding and media for businesses that value truth, excellence and impact.
           </p>
         </div>
         <div>
@@ -242,8 +230,8 @@ function Footer() {
       </div>
       <div className="border-t border-border/40">
         <div className="container-emet flex flex-col sm:flex-row gap-3 justify-between py-6 text-xs text-muted-foreground">
-          <span>© {new Date().getFullYear()} EMET. Built on truth in Perth, Australia.</span>
-          <span className="tracking-[0.2em] uppercase">Truth · Technology · Transformation</span>
+          <span>{new Date().getFullYear()} EMET</span>
+          <span className="tracking-[0.2em] uppercase">Truth Technology Transformation</span>
         </div>
       </div>
     </footer>
@@ -264,3 +252,4 @@ function RootComponent() {
     </QueryClientProvider>
   );
 }
+

@@ -8,6 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -63,12 +64,12 @@ const orgJsonLd = {
   "@type": "Organization",
   name: "EMET",
   legalName: "EMET",
-  url: "https://www.emet.com.au",
+  url: "https://emetstudio.net",
   logo: emetLogo,
   description:
     "EMET is a digital studio building software, websites, branding and media for businesses that value truth, excellence and impact.",
   slogan: "Truth. Technology. Transformation.",
-  email: "hello@emet.com.au",
+  email: "contact@emetstudio.net",
   telephone: "+61497461907",
   address: {
     "@type": "PostalAddress",
@@ -78,8 +79,9 @@ const orgJsonLd = {
   },
   areaServed: ["AU", "Worldwide"],
   sameAs: [
-    "https://www.linkedin.com/company/emet",
-    "https://www.instagram.com/emet.digital",
+    "https://www.linkedin.com/in/emet-studio-544a77435?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    "https://www.facebook.com/share/198gG2bs3i/",
+    "https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=bxx81yu",
   ],
 };
 
@@ -202,7 +204,7 @@ function Footer() {
         <div className="md:col-span-2">
           <img src={emetLogo} alt="EMET" width={140} height={44} className="h-11 w-auto object-contain" />
           <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
-            A digital studio building software, websites, branding and media for businesses that value truth, excellence and impact.
+            Software, websites, branding, media and marketing for growing businesses.
           </p>
         </div>
         <div>
@@ -218,12 +220,13 @@ function Footer() {
         <div>
           <h4 className="eyebrow">Contact</h4>
           <ul className="mt-4 space-y-2 text-sm text-foreground/80">
-            <li><a href="mailto:hello@emet.com.au" className="hover:text-gold">hello@emet.com.au</a></li>
+            <li><a href="mailto:contact@emetstudio.net" className="hover:text-gold">contact@emetstudio.net</a></li>
             <li><a href="tel:+61497461907" className="hover:text-gold">+61 497 461 907</a></li>
             <li>Perth, Western Australia</li>
             <li className="pt-3 flex gap-4">
-              <a href="https://linkedin.com/company/emet" className="hover:text-gold" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-              <a href="https://instagram.com/emet.digital" className="hover:text-gold" rel="noopener noreferrer" target="_blank">Instagram</a>
+              <a href="https://www.linkedin.com/in/emet-studio-544a77435?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="LinkedIn" title="LinkedIn" className="hover:text-gold" rel="noopener noreferrer" target="_blank"><Linkedin size={18} /></a>
+              <a href="https://www.facebook.com/share/198gG2bs3i/" aria-label="Facebook" title="Facebook" className="hover:text-gold" rel="noopener noreferrer" target="_blank"><Facebook size={18} /></a>
+              <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=bxx81yu" aria-label="Instagram" title="Instagram" className="hover:text-gold" rel="noopener noreferrer" target="_blank"><Instagram size={18} /></a>
             </li>
           </ul>
         </div>
@@ -231,7 +234,7 @@ function Footer() {
       <div className="border-t border-border/40">
         <div className="container-emet flex flex-col sm:flex-row gap-3 justify-between py-6 text-xs text-muted-foreground">
           <span>© {new Date().getFullYear()} EMET</span>
-          <span className="tracking-[0.2em] uppercase">Truth Technology Transformation</span>
+          <span>Perth · Australia · Worldwide</span>
         </div>
       </div>
     </footer>

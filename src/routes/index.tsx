@@ -8,9 +8,9 @@ const homeJsonLd = {
   "@type": "ProfessionalService",
   name: "EMET",
   image: emetLogo,
-  url: "https://www.emet.com.au",
+  url: "https://emetstudio.net",
   telephone: "+61497461907",
-  email: "hello@emet.com.au",
+  email: "contact@emetstudio.net",
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
@@ -38,19 +38,19 @@ const homeJsonLd = {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "EMET · Truth. Technology. Transformation. | Digital Solutions" },
+          { title: "EMET Studio | Software, Web, Creative & Marketing" },
       {
         name: "description",
         content:
-          "EMET builds software, websites, branding, media and marketing for businesses that value truth, excellence and impact.",
+          "EMET Studio builds software, websites, brands, media and marketing for growing businesses in Perth and beyond.",
       },
       { name: "keywords", content: "web design, software development, digital agency, branding, SEO, mobile app development, EMET" },
-      { property: "og:title", content: "EMET · Truth. Technology. Transformation." },
-      { property: "og:description", content: "Digital solutions company building trusted software, websites and brands." },
+      { property: "og:title", content: "EMET Studio | Software, Web, Creative & Marketing" },
+      { property: "og:description", content: "Software, websites, brands, media and marketing for growing businesses." },
       { property: "og:url", content: "/" },
       { property: "og:image", content: emetLogo },
-      { name: "twitter:title", content: "EMET · Truth. Technology. Transformation." },
-      { name: "twitter:description", content: "Digital studio building trusted software, websites and brands." },
+      { name: "twitter:title", content: "EMET Studio | Software, Web, Creative & Marketing" },
+      { name: "twitter:description", content: "Software, websites, brands, media and marketing for growing businesses." },
       { name: "twitter:image", content: emetLogo },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -85,8 +85,7 @@ function Home() {
               <span className="text-gold italic">Transformation.</span>
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              EMET builds software, websites, branding and media.
-              Engineered with integrity.
+              Software, websites, branding and media for growing businesses.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link to="/contact" className="btn-gold">Start a project</Link>
@@ -119,7 +118,7 @@ function Home() {
           <div>
             <p className="eyebrow">What we do</p>
             <h2 className="mt-4 text-4xl md:text-5xl max-w-2xl">
-              Five disciplines. One standard of craft.
+              Software, web, creative and growth.
             </h2>
           </div>
           <Link to="/services" className="text-sm text-gold gold-underline">All services →</Link>
@@ -191,7 +190,7 @@ function Home() {
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link to="/contact" className="btn-gold">Start a project</Link>
-            <a href="mailto:hello@emet.com.au" className="btn-ghost">hello@emet.com.au</a>
+            <a href="mailto:contact@emetstudio.net" className="btn-ghost">contact@emetstudio.net</a>
           </div>
         </div>
       </section>

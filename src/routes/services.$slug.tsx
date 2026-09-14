@@ -36,7 +36,7 @@ export const Route = createFileRoute("/services/$slug")({
             "@type": "Service",
             name: s.name,
             description: s.description,
-            provider: { "@type": "Organization", name: "EMET", url: "https://www.emet.com.au" },
+            provider: { "@type": "Organization", name: "EMET", url: "https://emetstudio.net" },
             areaServed: ["AU", "Worldwide"],
             hasOfferCatalog: {
               "@type": "OfferCatalog",
@@ -60,17 +60,25 @@ function ServiceDetail() {
 
   return (
     <>
-      <section className="container-emet py-24 md:py-32">
-        <Link to="/services" className="text-xs tracking-[0.25em] uppercase text-gold/80 hover:text-gold">
-          ← All services
-        </Link>
-        <p className="eyebrow mt-8"><span className="hairline mr-4" />{s.eyebrow}</p>
-        <h1 className="mt-6 text-5xl md:text-6xl max-w-3xl leading-tight">
-          {s.name.split(" ").slice(0, -1).join(" ")}{" "}
-          <span className="italic text-gold">{s.name.split(" ").slice(-1)}</span>
-        </h1>
-        <p className="mt-6 text-xl text-gold/90 italic max-w-2xl">{s.tagline}</p>
-        <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">{s.intro}</p>
+      <section className="container-emet py-24 md:py-32 grid gap-12 md:grid-cols-[1fr_0.8fr] md:items-center">
+        <div>
+          <Link to="/services" className="text-xs tracking-[0.25em] uppercase text-gold/80 hover:text-gold">
+            ← All services
+          </Link>
+          <p className="eyebrow mt-8"><span className="hairline mr-4" />{s.eyebrow}</p>
+          <h1 className="mt-6 text-5xl md:text-6xl max-w-3xl leading-tight">
+            {s.name.split(" ").slice(0, -1).join(" ")} {" "}
+            <span className="italic text-gold">{s.name.split(" ").slice(-1)}</span>
+          </h1>
+          <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">{s.intro}</p>
+        </div>
+        <img
+          src={s.image}
+          alt={`${s.name} service example`}
+          width={1200}
+          height={800}
+          className="h-80 w-full object-cover md:h-full md:min-h-96"
+        />
       </section>
 
       <section className="border-y border-border/60 bg-[oklch(0.17_0.035_245)]">
@@ -85,21 +93,6 @@ function ServiceDetail() {
             ))}
           </div>
         </div>
-      </section>
-
-      <section className="container-emet py-20 grid gap-12 md:grid-cols-[1fr_1.4fr]">
-        <div>
-          <p className="eyebrow">Outcomes</p>
-          <h2 className="mt-4 text-3xl md:text-4xl">What you can expect.</h2>
-        </div>
-        <ul className="space-y-6">
-          {s.outcomes.map((o, i) => (
-            <li key={o} className="flex gap-6 border-b border-border/60 pb-6">
-              <span className="text-gold text-sm tracking-[0.25em] shrink-0 pt-1">0{i + 1}</span>
-              <span className="text-lg text-foreground leading-relaxed">{o}</span>
-            </li>
-          ))}
-        </ul>
       </section>
 
       <section className="border-t border-border/60 bg-[oklch(0.17_0.035_245)]">

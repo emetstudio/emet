@@ -1,16 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import logoAsset from "../assets/emet-logo.png.asset.json";
 
 const contactJsonLd = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   name: "Contact EMET",
-  url: "https://www.emet.com.au/contact",
+  url: "https://emetstudio.net/contact",
   mainEntity: {
     "@type": "Organization",
     name: "EMET",
-    email: "hello@emet.com.au",
+    email: "contact@emetstudio.net",
     telephone: "+61497461907",
     address: {
       "@type": "PostalAddress",
@@ -24,11 +25,11 @@ const contactJsonLd = {
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact EMET · Digital Solutions | hello@emet.com.au" },
+      { title: "Contact EMET | Digital Studio Perth" },
       {
         name: "description",
         content:
-          "Get in touch with EMET. Email hello@emet.com.au or call +61 497 461 907.",
+          "Contact EMET Studio in Perth for software, web, creative, media or marketing work.",
       },
       { property: "og:title", content: "Contact EMET · Digital Solutions" },
       { property: "og:description", content: "Start a project with EMET." },
@@ -55,7 +56,7 @@ function Contact() {
     const body = encodeURIComponent(
       `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nCompany: ${data.get("company") || "-"}\nService: ${data.get("service") || "-"}\nBudget: ${data.get("budget") || "-"}\n\nMessage:\n${data.get("message")}`,
     );
-    window.location.href = `mailto:hello@emet.com.au?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:contact@emetstudio.net?subject=${subject}&body=${body}`;
     setSubmitted(true);
   }
 
@@ -122,7 +123,7 @@ function Contact() {
               {submitted && <span className="text-sm text-emerald">Opening your email client…</span>}
             </div>
             <p className="text-xs text-muted-foreground">
-              Prefer email? Reach us directly at <a href="mailto:hello@emet.com.au" className="text-gold">hello@emet.com.au</a>.
+              Prefer email? Reach us directly at <a href="mailto:contact@emetstudio.net" className="text-gold">contact@emetstudio.net</a>.
             </p>
           </form>
 
@@ -134,7 +135,7 @@ function Contact() {
             </div>
             <div>
               <p className="eyebrow">Email</p>
-              <a href="mailto:hello@emet.com.au" className="mt-3 block text-foreground hover:text-gold">hello@emet.com.au</a>
+              <a href="mailto:contact@emetstudio.net" className="mt-3 block text-foreground hover:text-gold">contact@emetstudio.net</a>
             </div>
             <div>
               <p className="eyebrow">Phone</p>
@@ -146,9 +147,10 @@ function Contact() {
             </div>
             <div>
               <p className="eyebrow">Social</p>
-              <div className="mt-3 flex flex-col gap-1 text-foreground">
-                <a href="https://linkedin.com/company/emet" target="_blank" rel="noopener noreferrer" className="hover:text-gold">LinkedIn →</a>
-                <a href="https://instagram.com/emet.digital" target="_blank" rel="noopener noreferrer" className="hover:text-gold">Instagram →</a>
+              <div className="mt-3 flex gap-4 text-foreground">
+                <a href="https://www.linkedin.com/in/emet-studio-544a77435?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer" className="hover:text-gold"><Linkedin size={20} /></a>
+                <a href="https://www.facebook.com/share/198gG2bs3i/" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer" className="hover:text-gold"><Facebook size={20} /></a>
+                <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=bxx81yu" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" className="hover:text-gold"><Instagram size={20} /></a>
               </div>
             </div>
           </aside>

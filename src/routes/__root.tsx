@@ -243,11 +243,23 @@ function Footer() {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  useEffect(() => {
+    function handlePointerDown(event: PointerEvent) {
+      if (!(event.target instanceof Element)) return;
+      if (!event.target.closest("button, .btn-gold, .btn-ghost")) return;
+      if ("vibrate" in navigator) navigator.vibrate(8);
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown, { passive: true });
+    return () => document.removeEventListener("pointerdown", handlePointerDown);
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <div className="flex min-h-screen flex-col">
         <Header />
-        <main className="flex-1">
+        <main className="page-motion flex-1">
           <Outlet />
         </main>
         <Footer />

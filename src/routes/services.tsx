@@ -101,7 +101,7 @@ function Services() {
 
       {activeService && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-navy-deep/85 p-4 backdrop-blur-sm"
+          className="service-modal-backdrop fixed inset-0 z-50 flex items-center justify-center bg-navy-deep/85 p-4 backdrop-blur-sm"
           role="presentation"
           onClick={() => setActiveService(null)}
         >
@@ -109,7 +109,7 @@ function Services() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="service-modal-title"
-            className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto border border-gold/30 bg-background p-6 shadow-2xl md:p-10"
+            className="service-modal-panel relative max-h-[90vh] w-full max-w-2xl overflow-y-auto border border-gold/30 bg-background p-6 shadow-2xl md:p-10"
             onClick={(event) => event.stopPropagation()}
           >
             <button
